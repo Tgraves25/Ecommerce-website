@@ -1,4 +1,6 @@
-/* Programmer: Trevone Graves*/
+/*This is the CSS for the E-commerce html*/
+/*Programmer: Trevone Graves*/
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,9 @@ body {
     color: #333;
     padding: 0;
     margin: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header/Nav Styling */
@@ -61,8 +66,8 @@ nav {
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    gap: 20px;
+    justify-content: center;
 }
 
 .product {
@@ -81,12 +86,18 @@ nav {
     margin-bottom: 1rem;
 }
 
+h1 {
+    font-size: calc(2rem + 1vw)
+}
+
 .product h2, .product h3 {
     margin-bottom: 0.5rem;
+    font-size: calc(2rem + 0.5vw);
 }
 
 .product p {
     margin-bottom: 1rem;
+    font-size: calc(1rem + 0.2vw);
 }
 
 button {
@@ -182,6 +193,150 @@ button:hover {
 
     button {
         width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Contact Section */
+#contact {
+    background: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+.contact-header {
+    margin-bottom: 2rem;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.contact-form button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Information */
+.contact-info {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Contact Section */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form, .contact-info {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-header p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact-info p {
         font-size: 0.9rem;
     }
 }
