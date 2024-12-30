@@ -49,7 +49,7 @@ To view or work with the project locally, follow these steps:
 
 ## Live Demo
 
-For a live preview of the project, check out [Cookware Hub E-commerce Website](#).
+For a live preview of the project, check out [[Cookware Hub E-commerce Website](#)](https://tgraves25.github.io/Ecommerce-website/).
 
 ## Future Improvements
 
